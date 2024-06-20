@@ -3,9 +3,9 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { Button, Result } from 'antd';
 
 const Summary: React.FC = () => {
-    const query = new URLSearchParams(useLocation().search);
-    const name = query.get('name');
-    const rating = query.get('rating');
+    const query    = new URLSearchParams(useLocation().search);
+    const name     = query.get('name');
+    const rating   = query.get('rating');
     const follower = query.get('follower');
 
     const navigate = useNavigate();

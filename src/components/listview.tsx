@@ -26,13 +26,13 @@ const ListView: React.FC = () => {
   const [ influencers, setInfluencers ] = useState<DataType[]>([]);
   const query = new URLSearchParams(useLocation().search);
 
-  useEffect(() => {
+  const gender       = query.get('gender');
+  const min_rating   = query.get('rating') || 0;
+  const min_follower = query.get('follower') || 0;
+  const min_cost     = query.get('min_cost') || 0;
+  const max_cost     = query.get('max_cost') || 0;
 
-    const gender = query.get('gender');
-    const min_rating = query.get('rating') || 0;
-    const min_follower = query.get('follower') || 0;
-    const min_cost = query.get('min_cost') || 0;
-    const max_cost = query.get('max_cost') || 0;
+  useEffect(() => {
 
     const fetchInfluencers = async () => {
       try {
