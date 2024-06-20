@@ -56,7 +56,7 @@ const ListView: React.FC = () => {
     };
 
     fetchInfluencers();
-  }, []);
+  }, [gender, max_cost, min_cost, min_follower, min_rating]);
 
   if (loading) {
     return (
