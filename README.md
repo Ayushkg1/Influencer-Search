@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Setting Up and Running Project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -22,26 +22,15 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Technical Architecture and Key Decisions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+There are 4 routes with different components.
 
-### `npm run eject`
+1. Home page -  There is a form in which brand user can enter the desired details and submit.
+2. List page -  Here only those influencers will be listed who fulfils the criteria of brand user.
+3. Details page -  Here all the details of the selected influencer will be displayed like images, contact etc. I have showed only influencer details as I need to create fake API.
+4. Summary page - It ensures that the appointment is booked successfully.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+I thought that I can use contextAPI for the state management, then later I realizes for simplicity I can go through the query parameters because when the page reloads then contextAPI loses data.
+I have utilized Ant Design very beautifully after reading their documentation and passed props in the Ant Designs' components too.
